@@ -11,11 +11,9 @@ import javax.persistence.ManyToMany;
 public class Book {
 	
 	@Id
-	
 	private String isbn;
 	private String title;
 	private Double price;
-	
 	
 	public List<Author> getAuthors() {
 		return authors;
@@ -24,8 +22,7 @@ public class Book {
 		this.authors = authors;
 	}
 	@ManyToMany
-	List<Author> authors = new ArrayList<>();
-	
+	List<Author> authors = new ArrayList<Author>();
 	
 	public String getIsbn() {
 		return isbn;
@@ -45,7 +42,4 @@ public class Book {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
-	
-	
-
 }

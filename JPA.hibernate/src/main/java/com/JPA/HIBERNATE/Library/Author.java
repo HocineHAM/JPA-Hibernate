@@ -12,9 +12,7 @@ public class Author {
 	private int id;
 	private String firstName;
 	private String lastName;
-	
-	
-	
+			
 	public int getId() {
 		return id;
 	}
@@ -33,7 +31,4 @@ public class Author {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	
-	
-
 }

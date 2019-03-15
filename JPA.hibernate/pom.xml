@@ -18,20 +18,21 @@
     <groupId>org.hibernate.javax.persistence</groupId>
     <artifactId>hibernate-jpa-2.1-api</artifactId>
     <version>1.0.0.Final</version>
-    <scope></scope>
+    
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
 <dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate-entitymanager</artifactId>
     <version>5.2.10.Final</version>
+    <scope>runtime</scope>
 </dependency>
 <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
 <dependency>
     <groupId>com.h2database</groupId>
     <artifactId>h2</artifactId>
     <version>1.4.196</version>
-    <scope>test</scope>
+    <scope>runtime</scope>
 </dependency>
 
       <dependency> 
@@ -50,6 +51,11 @@
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-compiler-plugin</artifactId>
     <version>3.1</version>
+</dependency>
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>5.1.6</version>
 </dependency>
 
   </dependencies>

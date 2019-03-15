@@ -14,10 +14,10 @@ import com.JPA.HIBERNATE.Library.Book;
 public class App {
 	private static Logger log = LoggerFactory.getLogger(App.class);
 
-	public static void main(String argv[]) {
+	public static void main(String argv[] ) {
 		System.out.println("Runing App...");
 		log.debug("Create persistence manager");
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("myApp");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("test");
 		EntityManager em = emf.createEntityManager();
 		log.debug("Create entities");
 		Author Erik = new Author();

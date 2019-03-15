@@ -2,8 +2,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 	version="2.0">
-	<persistence-unit name="myApp">
-		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+	<persistence-unit name="test">
+	<!-- 	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<properties>
 			<property name="javax.persistence.jdbc.driver"
 				value="org.h2.Driver" />
@@ -11,9 +11,23 @@
 				value="jdbc:h2:./db" />
 
 			<property name="hibernate.dialect"
-				value="org.hibernate.dialect.HSQLDialect" />
+				value="org.hibernate.dialect.H2Dialect" />
 			<property name="hibernate.hbm2ddl.auto" value="create" />
 			<property name="hibernate" value="true" />
+		</properties>
+	</persistence-unit> -->
+	<!-- <provider>org.hibernate.ejb.HibernatePersistence</provider> -->
+	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<properties>
+			<property name="hibernate.archive.autodetection" value="class" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLInnoDBDialect" />
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/test" />
+			<property name="hibernate.connection.username" value="root" />
+			<property name="hibernate.connection.password" value="root" />
+			<!--  <property name="hibernate.show_sql" value="true"/> 
+			<property name="hibernate.flushMode" value="FLUSH_AUTO" /> -->
+			<property name="hibernate.hbm2ddl.auto" value="create" />
 		</properties>
 	</persistence-unit>
 </persistence>
